@@ -1533,8 +1533,8 @@ type InstallationRepositoriesPayload struct {
 			Contents            string `json:"contents"`
 		} `json:"permissions"`
 		Events         []string `json:"events"`
-		CreatedAt      int64    `json:"created_at"`
-		UpdatedAt      int64    `json:"updated_at"`
+		CreatedAt      time.Time    `json:"created_at"`
+		UpdatedAt      time.Time    `json:"updated_at"`
 		SingleFileName *string  `json:"single_file_name"`
 	} `json:"installation"`
 	RepositoriesAdded []struct {
@@ -3013,8 +3013,8 @@ type ProjectCardPayload struct {
 			Type              string `json:"type"`
 			SiteAdmin         bool   `json:"site_admin"`
 		} `json:"creator"`
-		CreatedAt  int64  `json:"created_at"`
-		UpdatedAt  int64  `json:"updated_at"`
+		CreatedAt  time.Time  `json:"created_at"`
+		UpdatedAt  time.Time  `json:"updated_at"`
 		ContentURL string `json:"content_url"`
 	} `json:"project_card"`
 	Repository struct {
